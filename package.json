@@ -23,7 +23,7 @@
     "contentlayer2": "^0.5.5",
     "esbuild": "^0.24.2",
     "feather-icons": "^4.29.2",
-    "next": "15.2.8",
+    "next": "16.1.5",
     "next-contentlayer2": "^0.5.5",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
