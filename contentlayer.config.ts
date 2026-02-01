@@ -3,6 +3,7 @@ import remarkGfm from 'remark-gfm'; // Untuk mendukung GitHub Flavored Markdown 
 import rehypeSlug from 'rehype-slug'; // Menambahkan slug ke elemen heading (opsional)
 import rehypePrettyCode from 'rehype-pretty-code'; // Untuk pewarnaan sintaksis (opsional)
 import rehypePresetMinify from 'rehype-preset-minify';
+import rehypeExternalLinks from './libs/rehype-external-links';
 
 export const Blogs = defineDocumentType(() => ({
   name: 'Blogs',
@@ -29,6 +30,7 @@ export default makeSource({
     remarkPlugins: [remarkGfm], // Menambahkan plugin Remark (opsional)
     rehypePlugins: [
       rehypeSlug, // Menambahkan slug untuk heading
+      rehypeExternalLinks,
       [
         rehypePrettyCode,
         {

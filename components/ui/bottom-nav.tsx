@@ -8,7 +8,7 @@ import Link from 'next/link';
 const BottomNavigation = () => {
   return (
     <TabGroup>
-      <TabList className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md flex justify-around py-2 md:hidden">
+      <TabList className="flex justify-around py-2 md:hidden">
         {bottomNavigation.map((item) => (
           <Tab
             key={item.title}

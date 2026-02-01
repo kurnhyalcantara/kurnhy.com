@@ -13,8 +13,9 @@ export default function Header() {
       <Container
         as="header"
         className={clsx(
-          'bg-white/75 py-2 backdrop-blur dark:bg-gray-900',
-          'shadow-sm saturate-100 md:rounded-2xl',
+          'bg-white/70 py-2.5 backdrop-blur-xl dark:bg-gray-900/60',
+          'shadow-masere saturate-150 md:rounded-2xl',
+          'outline outline-1 outline-gray-100/80 dark:outline-gray-700/60',
           siteMetadata.stickyNav && 'sticky top-2 z-50 lg:top-3'
         )}
       >
@@ -27,12 +28,14 @@ export default function Header() {
                   <Link
                     key={title}
                     href={href}
-                    className="font-medium px-3 py-1 relative inline-block group"
+                    className={clsx(
+                      'relative inline-flex items-center rounded-xl px-3 py-1.5 text-sm font-medium',
+                      'text-gray-700 transition-colors hover:text-gray-900',
+                      'hover:bg-gray-900/5 dark:text-gray-200 dark:hover:text-white dark:hover:bg-white/10',
+                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/10 dark:focus-visible:ring-white/15'
+                    )}
                   >
-                    <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300"></span>
-                    <span className="relative text-gray-700 group-hover:text-white dark:text-gray-200 dark:group-hover:text-white">
-                      {title}
-                    </span>
+                    {title}
                   </Link>
                 );
               })}
@@ -40,7 +43,7 @@ export default function Header() {
             <div
               data-orientation="vertical"
               role="separator"
-              className="hidden h-4 w-px shrink-0 bg-gray-200 dark:bg-gray-600 md:block"
+              className="hidden h-4 w-px shrink-0 bg-gray-200/80 dark:bg-gray-700/70 md:block"
             />
             <div className="items-center gap-2">
               <ThemeToggle />
@@ -48,7 +51,7 @@ export default function Header() {
           </div>
         </div>
       </Container>
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/70 backdrop-blur-xl shadow-masere outline outline-1 outline-gray-100/80 dark:outline-gray-700/60">
         <BottomNavigation />
       </div>
     </>
