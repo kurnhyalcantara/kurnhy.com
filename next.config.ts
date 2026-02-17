@@ -11,11 +11,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    turbo: {
-      minify: true,
-    },
-  },
 };
 
 export default withContentlayer(nextConfig);
