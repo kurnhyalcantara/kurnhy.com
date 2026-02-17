@@ -25,7 +25,7 @@
     "feather-icons": "^4.29.2",
     "next": "16.1.5",
     "next-contentlayer2": "^0.5.5",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rehype-preset-minify": "^7.0.1",
